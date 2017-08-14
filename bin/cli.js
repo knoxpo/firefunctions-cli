@@ -19,7 +19,7 @@ yargsCli
   .command('new', 'create new FireFunctions project', (yargs) => {
     yargs.usage('Usage: $0 new [name]')
   }, (argv) => {
-    spawn(create(argv._[0]), {
+    spawn(create(argv._[1]), {
       shell: true,
       stdio: 'inherit'
     });

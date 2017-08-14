@@ -71,26 +71,43 @@ const initCreate = () => {
 
 const create = (appName) => {
   cp('-r', __dirname + '/../src/.', appName);
-  console.log('----------------------------------------------------------');
   figlet('FireFunctionsCLI', function(err, data) {
     if (err) {
       return;
     }
-    console.log(data);
-    console.log('----------------------------------------------------------');
+    console.log(chalk.yellow.bold(data));
+    console.log(chalk.grey('------------------------------------------------------------------------------------'));
     console.log(chalk.white.bold('Welcome to FireFunctionsCLI'));
-    console.log('----------------------------------------------------------');
+    console.log(chalk.grey('------------------------------------------------------------------------------------'));
     cd(appName);
     installPackages().then(() => {
-      console.log(chalk.white.bold('Let\'s setup firebase'));
-      execSync('firebase init', { stdio: 'inherit' });
+      console.log('');
+      console.log(chalk.grey('------------------------------------------------------------------------------------'));
       console.log(chalk.white.bold('Let\'s get started'));
-      console.log(chalk.green('Step 1: cd into the newly created '), chalk.green.bold(appName), chalk.green(' directory'));
-      console.log('----------------------------------------------------------');
-      console.log(chalk.green('Step 2: run '), chalk.green.bold('yarn run deploy'));
-      console.log('----------------------------------------------------------');
-      // add your own custom messages here.
-      console.log('----------------------------------------------------------');
+
+      console.log(chalk.grey('------------------------------------------------------------------------------------'));
+      console.log('');
+      console.log(chalk.green.bold('  Step 1: '), chalk.green('cd into the newly created'), chalk.blue.bold(` " ${appName} " `), chalk.green('directory'));
+      console.log('');
+
+      console.log(chalk.grey('------------------------------------------------------------------------------------'));
+      console.log('');
+      console.log(chalk.green.bold('  Step 2: '), chalk.green('Init Firebase functions'), chalk.blue.bold('" firebase init funtions "'));
+      console.log(chalk.yellow('  If you haven\'t installed firebase-tools '), chalk.yellow.bold('" npm i -g firebase-tools "'));
+      console.log('');
+
+      console.log(chalk.grey('------------------------------------------------------------------------------------'));
+      console.log('');
+      console.log(chalk.green.bold('  Step 3: '), chalk.green('run '), chalk.blue.bold('yarn run deploy'));
+      console.log('');
+
+      console.log(chalk.grey('------------------------------------------------------------------------------------'));
+      console.log(chalk.grey('------------------------------------------------------------------------------------'));
+      console.log('');
+      console.log(chalk.green.bold('  You are now ready deployed your first Firebase function'));
+      console.log('');
+      console.log(chalk.grey('------------------------------------------------------------------------------------'));
+      console.log(chalk.grey('------------------------------------------------------------------------------------'));
     })
     .catch(error => {
       console.log(chalk.red('An unexpected error occurred'))

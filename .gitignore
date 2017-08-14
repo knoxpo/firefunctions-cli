@@ -1,0 +1,8 @@
+yarn.lock
+node_modules
+src/node_modules
+src/functions
+src/.firebaserc
+src/firebase.json
+src/firbase-debug.log
+src/yarn.lock
