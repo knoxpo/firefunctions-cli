@@ -1,0 +1,35 @@
+{
+  "version": "0.1.4",
+  "main": "index.js",
+  "bin": {
+    "firefunc": "./bin/cli.js"
+  },
+  "name": "fire-functions-cli",
+  "author": "Knoxpo",
+  "description": "Working with FireFunctions makes Firebase Functions delpoy very easy. All your code goes in ./src folder. Where all your express API code will go under ./src/api, model creation will go under ./src/model, trigger creation will go under ./src/triggers and all other library initializtion will go under ./src/lib.",
+  "scripts": {
+    "build-source": "node bin/build.js",
+    "deploy-source": "node bin/deploy.js",
+    "create-source": "node bin/create.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/knoxpo/firefunctions-cli.git"
+  },
+  "engines": {
+    "node": ">= 6.9.0",
+    "npm": ">= 3.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/knoxpo/firefunctions-cli/issues"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^1.1.3",
+    "commander": "^2.9.0",
+    "cross-spawn": "^5.1.0",
+    "figlet": "^1.2.0",
+    "shelljs": "^0.7.7",
+    "yargs": "^8.0.2"
+  }
+}
