@@ -1,0 +1,18 @@
+{
+      "project": {
+            "name": "firestarter",
+            "author": ""
+      },
+      "workspace": {
+            "root": "firefunctions",
+            "outDir": "functions",
+            "environmentSource": "firefunctions/environments/environment.ts",
+            "environments": {
+                  "dev": "firefunctions/environments/environment.ts",
+                  "prod": "firefunctions/environments/environment.prod.ts"
+            },
+            "triggerSource": "./firefunctions/triggers",
+            "modelSource": "./firefunctions/models",
+            "apiSource": "./firefunctions/api"
+      }
+}
